@@ -1,5 +1,5 @@
 # Himalayas-3D-Map-Generation
-![Himalayas_geographical](https://github.com/Hwoabam/Rstudio/blob/master/ezgif.com-optimize.gif)
+![Himalayas_geographical](https://github.com/Hwoabam/3D-visualization-of-Himalayas-with-Rayshader/blob/master/ezgif.com-optimize.gif)
 
 Various number of packages which are required for the 3D map generation. These are installed and loaded into the program. These packages avail the functions such as Plotting of points, shading and adjusting the colors, conversion of GIS data, validating GDAL operations,etc. 
 ```{r}
@@ -20,7 +20,7 @@ everest_elevation = raster::merge(elevation1,elevation2)
 height_shade(raster_to_matrix(everest_elevation)) %>%
 plot_map()
 ```
-![Elevation Heat Map](https://github.com/Hwoabam/Rstudio/blob/master/EVR1.png)
+![Elevation Heat Map](https://github.com/Hwoabam/3D-visualization-of-Himalayas-with-Rayshader/blob/master/EVR1.png)
 
 The coordinate reference of the elevation data matched to the imagery data
 ```{r}
@@ -59,7 +59,7 @@ render_scalebar(limits=c(0,10,20),label_unit = "km",position = "S", y=50,scale_l
 render_compass(position = "W" )
 render_snapshot(title_text = "Mount Everest_geographical|Imagery: Landsat 8 | DEM: 30m SRTM",title_bar_color = "#1f5214", title_color = "white", title_bar_alpha = 1)
 ```
-![Himalayas_geographical](https://github.com/Hwoabam/Rstudio/blob/master/EVR2.png)
+![Himalayas_geographical](https://github.com/Hwoabam/3D-visualization-of-Himalayas-with-Rayshader/blob/master/EVR2.png)
 
 A 24 second video is generated of the animation of the rotation of the plot using ffmpeg function through a system() call, at framerate of 60fps. 
 ```{r}
@@ -73,4 +73,3 @@ render_camera(theta=-45+angles[i])
 rgl::rgl.close()
 system("ffmpeg -framerate 60 -i evr_geo%d.png -vcodec libx264 -an Mount_Everest_geographical_1.mp4 ")
 ```
-![Himalayas_geographical](https://github.com/Hwoabam/Rstudio/blob/master/EVR2.png)
