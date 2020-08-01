@@ -75,4 +75,4 @@ render_camera(theta=-45+angles[i])
 rgl::rgl.close()
 system("ffmpeg -framerate 60 -i evr_geo%d.png -vcodec libx264 -an Mount_Everest_geographical_1.mp4 ")
 ```
-![Himalayas_geographical](C:/Users/asus/Documents/Mount_Everest_geographical_1.mp4)
+![Himalayas_geographical](https://github.com/[Hwoabam]/[Rstudio]/blob/master/EVR2.jpg?raw=true)
