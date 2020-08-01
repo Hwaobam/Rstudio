@@ -26,6 +26,7 @@ everest_elevation = raster::merge(elevation1,elevation2)
 height_shade(raster_to_matrix(everest_elevation)) %>%
 plot_map()
 ```
+![Elevation Heat Map](https://github.com/Hwoabam/Rstudio/blob/master/EVR2.png)
 The coordinate reference of the elevation data matched to the imagery data
 ```{r}
 crs(everest_elevation)
