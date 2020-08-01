@@ -58,7 +58,9 @@ render_scalebar(limits=c(0,10,20),label_unit = "km",position = "S", y=50,scale_l
 render_compass(position = "W" )
 render_snapshot(title_text = "Mount Everest_geographical|Imagery: Landsat 8 | DEM: 30m SRTM",title_bar_color = "#1f5214", title_color = "white", title_bar_alpha = 1)
 ```
-optional: Conversion of the map to a video footage of its planar rotation
+![Himalayas_geographical](https://github.com/Hwoabam/Rstudio/blob/master/EVR2.png)
+
+A 24 second video is generated of the animation of the rotation of the plot using ffmpeg function through a system() call, at framerate of 60fps. 
 ```{r}
 angles= seq(0,360,length.out = 1441)[-1]
 for(i in 1:1440) {
