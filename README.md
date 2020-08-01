@@ -1,11 +1,5 @@
----
-title: "Everest 3D Map Generation"
-output:
-  html_notebook: default
-  html_document:
-    df_print: paged
----
 
+title: "Everest 3D Map Generation"
 
 Various number of packages which are required for the 3D map generation. These are installed and loaded into the program. These packages avail the functions such as Plotting of points, shading and adjusting the colors, conversion of GIS data, validating GDAL operations,etc. 
 ```{r}
